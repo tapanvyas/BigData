@@ -1,0 +1,15 @@
+CREATE KEYSPACE project_db WITH REPLICATION = {'class': 'SimpleStrategy','replication_factor':1};
+
+CREATE TABLE IF NOT EXISTS 
+project_db.comments(
+id INT PRIMARY KEY,
+comment_by VARCHAR,
+author VARCHAR,
+time INT,
+time_ts TIMESTAMP,
+comment VARCHAR,
+parent_comment INT,
+deleted BOOLEAN,
+dead BOOLEAN,
+ranking SMALLINT
+); 
